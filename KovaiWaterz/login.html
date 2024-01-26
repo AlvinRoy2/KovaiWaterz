@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User login</title>
+    <style media="screen">
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+
+      .box {
+        width: 50%;
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 40px;
+        background: #3E454C;
+        text-align: center;
+        border-radius: 20px;
+      }
+
+      .box input[type="text"],
+      .box input[type="password"] {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #ffffff;
+        padding: 10px 10px;
+        width: 100%;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+      }
+
+      .box h1 {
+        color: white;
+        font-weight: 500;
+      }
+
+      .box input[type="text"]:focus,
+      .box input[type="password"]:focus {
+        width: 100%;
+        border-color: #d3d3d3;
+      }
+
+      .box input[type="submit"] {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #2ecc71;
+        padding: 14px 40px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+      }
+
+      .box input[type="submit"]:hover {
+        background: #2ecc71;
+      }
+
+      .error-message {
+        color: #ff0000;
+      }
+
+      /* ... (rest of the styles) ... */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <div class="card">
+                  <form class="box" method="post">
+                      <h1>Login</h1>
+                      <input type="text" name="username" class="form-control" placeholder="Username" autocomplete="off" required>
+                      <input type="password" name="password" class="form-control" placeholder="Password" required>
+                      <span class="error-message" id="passwordError"></span>
+                      <input type="submit" name="" value="Login">
+                      <p style="color:white;">Don't have an account? <a href="#signup">Sign Up</a></p>
+                  </form>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+
+    <script>
+      // Password length validation
+      document.querySelector('.box input[type="submit"]').addEventListener('click', function() {
+        var passwordInput = document.querySelector('.box input[name="password"]');
+        var passwordError = document.getElementById('passwordError');
+
+        if (passwordInput.value.length < 8) {
+          passwordError.textContent = 'Incorrect Password (Minimum 8 characters)';
+          event.preventDefault();
+        } else {
+          passwordError.textContent = '';
+        }
+      });
+    </script>
+  </body>
+</html>
