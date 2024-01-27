@@ -1,74 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Galaxy Blue Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>KovaiWaterz - City Water Supply Network Mapping</title>
+    <link rel="stylesheet" href="Hello12.css">
     <style>
-        .players {
-            display: flex;
-            align-items: center;
-        }
-
-        .desc {
-            width: 50%;
-            display: inline-block;
-            text-align: left;
-        }
-
-        .desc h2 {
-            font-size: 2.5em;
-            text-decoration: underline;
-            margin-bottom: 5%;
-            color: #fff; /* White text color */
-        }
-
-        .desc p {
-            width: 100%;
-            text-indent: 40px;
-            font-size: 1.2em;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            word-spacing: 2px;
-            margin-bottom: 10%;
-            color: #ddd; /* Light gray text color */
         }
 
-        .images {
-            margin-left: 8%; /* Adjust the margin for spacing */
+        /* Navbar Styles */
+        nav {
+            background-color: #333;
+            padding: 15px;
+            color: #fff;
+            text-align: center;
         }
 
-        .images img {
-            width: 100%;
-            max-width: 450px;
-            height: auto;
-            display: inline-block;
-            border-radius: 10px;
-            align-items: normal;
-            padding: 40px 0px;
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
-        .Github
-    {
-        background-color: rgb(46,164,79);
-        color:white;
-        border: none;
-        border-radius: 5px;
-        margin-bottom: 20px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        padding-left: 100px;
-        padding-right: 100px;
-        cursor: pointer;
-    }
-    .Github:hover{
-        opacity:0.8;
-        box-shadow: 10px 10px 20px rgba(0,0,0,0.15);
-        background-color: lawngreen;
-        color: blue;
-        transition: 0.3s linear;
-    }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Hero Header Styles */
+        .hero-header {
+            background-image: url('hero-background.jpg'); /* Add your background image URL */
+            background-size: cover;
+            color: darkblue;
+            text-align: center;
+        }
+
+        .hero-header h1 {
+            font-size: 3em;
+        }
+
+        .hero-header p {
+            font-size: 1.2em;
+        }
+
+        /* Features Section Styles */
+        .features {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .feature-item {
+            margin-bottom: 40px;
+        }
+
+        .feature-item h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* CTA Section Styles */
+        .cta {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .cta h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .cta button {
+            background-color: #fff;
+            color: #4CAF50;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta button:hover {
+            background-color: #3E8E41;
+        }
+
+        /* Testimonial Section Styles */
+        .testimonial {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .testimonial-item {
+            margin-bottom: 40px;
+        }
+
+        .testimonial-item p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        /* FAQ Section Styles */
+        .faq {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .faq-item p {
+            font-size: 1.2em;
+        }
+
+        /* Contact Section Styles */
+        .contact {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .contact button {
+            background-color: #fff;
+            color: #333;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .contact button:hover {
+            background-color: #555;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+.whitebox
+{
+    display: flex;
+    background-color: #333;
+    color: #f2f2f2;
+    font-weight: 52px;  
+}
+body{
+  margin: 0%;
+  background-color: lightblue;
+}
+.logo
+{
+    flex: 1;
+    height:55px;
+    width:50%;
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 45px;
+    vertical-align: middle;
+    font-family: 'Roboto Slab', serif;
+    text-decoration-style: wavy;
+}
+ 
+.logo a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 50px;
+    vertical-align: middle;
+    text-decoration-style: wavy;
+
+  }
+  
+.logo a.active {
+    background-color: #04AA6D;
+    color: white;
+    vertical-align: middle;
+  }
+.logo a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    width: 50%;
+    display:inline-block;
+    padding-right: 20px;
+  }
+
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  .img2:hover{
+      opacity: 0.5;
+  }
+  .img2.active {
+    opacity: 0.5;
+  }
     </style>
 </head>
 <body>
@@ -88,7 +275,6 @@
     </div>
     
 
-    <!-- Hero Header Section -->
     <div class="hero-header">
         <h1>Physiography and Drainage</h1>
         <p>The North western part and the Southern part of the Coimbatore is occupied by hill ranges of Western Ghats, namely Nilgiris hills on the North-West and Anamalai hills on the South.
@@ -127,7 +313,18 @@
             <a href="login.html" target="_blank"><button class="Github">Sign up</button></a>
         </div>
     </div>
-    
+
+    <!-- Features Section -->
+    <div class="features">
+        <div class="feature-item">
+            <h2>Secure Login and Access</h2>
+            <p>Highlight the secure login and access system for users.</p>
+        </div>
+        <div class="feature-item">
+            <h2>Real-time Data Monitoring</h2>
+            <p>Detail the functionality allowing changes to be made to the water network. Showcase the real-time data monitoring capabilities of KovaiWaterz.</p>
+        </div>
+    </div>
 
     <!-- CTA Section -->
     <div class="cta">
